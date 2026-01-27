@@ -23,12 +23,18 @@
 <body>
     
     <h1>Hello World</h1>
-    <div class="cuadro sombra">Hola</div> 
-    <script>
+    <div id="resultado" class="cuadro sombra border-5">Hola</div> 
+    <form action="">
+        <input type="text" id="nombre" placeholder="Ingresa tu nombre" value="Paco" >
+    </form>
+
+    <script> /*Siempre al final de todo el contenido*/
         /*console.log("Hello World!!")*/
         document.write("Hello JavaScript") // "document.write" sirve para introducir texto
         document.write("<h1>Título chuleta</h1>")
-        let miNombre="Laia" //let sirve para crear una variable, seguido de ="Aquí introduces el texto"
+        let miNombre="David" //let sirve para crear una variable, seguido de ="Aquí introduces el texto"
+        let myName="Sánchez"
+        console.log("te llamas" + myName + miNombre) 
         document.write("Hola"+" "+miNombre+"; que tal!")
         console.log(miNombre)
         let div=document.querySelector(".cuadro")
@@ -36,7 +42,43 @@
         console.log(div.classList)
         div.classList.remove("sombra")   //quitar clase sombra
         div.classList.add("fondo")  //añadir clase fondo
-        
+        const miDiv=document.querySelector(".cuadro")
+        console.log(miDiv.innerHTML)/*innerHTML sirve para seleccionar el texto que hay dentro del div*/
+        console.log(miDiv.classList)
+        miDiv.classList.add("borde-5") //en vez de .add, .remove para quitar el otro para añdir
+        miDiv.innerHTML= "Hola david" //para cambiar el contenido del div
+        const inputNombre= document.querySelector("#nombre")
+        console.log(nombre)
+        nombre.value="otro nombre" //cambiar el contenido de valor del input 
+        function saludar(saludo){
+            console.log(saludo)
+
+        }
+        saludar("hola")
+        saludar("que pasa!")
+        saludar("tranquilo")
+        miDiv.addEventListener("click", contador)
+        let cuenta=0
+        function contador(){
+            
+            cuenta
+            console.log("cuenta value:" + cuenta)
+            cuenta= cuenta+1
+
+
+
+        }
+
+
+        input.addEventListener("changes", escribir)
+        function escribir(){
+            
+            
+
+
+
+
+        }
         // Mola JS
     </script>
 </body>
