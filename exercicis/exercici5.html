@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sessió 5</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <h1>Exercicis JavaScript - Sessió 5</h1>
+    <div id="div1">
+        Hola que tal, como estas!
+    </div>
+    <script>
+        console.log("Hola, món"); /*para ver el mensaje en consola*/
+        let miNombre="Adam Sánchez" /*Pra establecer una variable, en este caso el nombre de la variable es "Adam Sánchez"*/
+        console.log("El meu nom és" + miNombre)
+        function saludar(nom) {
+            console.log("Hola," +nom + "!"); /*a tavés de lo que se ponga en el parentesis de "Function" sera la variable que se muestre después en consola*/
+        }
+            saludar("Marc!");
+            saludar("Laura!");
+            saludar("Pep!");
+
+        const miDiv=document.querySelector("#div1") /*Para crear una constante que va asociado al <div>*/
+        console.log(miDiv.innerHTML); //Para seleccionar el contenido de dentro del <div>
+        miDiv.innerHTML=("<strong>He cambiado el texto!</strong>")
+    </script>
+</body>
+</html>
