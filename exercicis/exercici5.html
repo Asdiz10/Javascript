@@ -15,6 +15,8 @@
     <div id="div1" class="destacado">
         Hola que tal, como estas!
     </div>
+    <input id=entrada id="btn" type="text" placeholder="Ingresa tu nombre">
+    <button id="btn">Enviar</button>
     <script>
         console.log("Hola, món"); /*para ver el mensaje en consola*/
         let miNombre="Adam Sánchez" /*Pra establecer una variable, en este caso el nombre de la variable es "Adam Sánchez"*/
@@ -35,6 +37,15 @@
         console.log(miDiv.classList)
         miDiv.classList.add("destacado")
         console.log(miDiv.classList)
+
+        const inputNombre = document.querySelector("#entrada")
+        function mostraValor(){
+            console.log(inputNombre.value) //para ver el valor del input, es decir el contenido que se rellene en el campo
+
+        }
+
+        const button = document.querySelector("#btn")
+        function 
     </script>
 </body>
 </html>
