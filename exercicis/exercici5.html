@@ -1,16 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sessió 5</title>
     <style>
-
+        .destacado{
+            background-color: yellow;
+        }
     </style>
 </head>
 <body>
     <h1>Exercicis JavaScript - Sessió 5</h1>
-    <div id="div1">
+    <div id="div1" class="destacado">
         Hola que tal, como estas!
     </div>
     <script>
@@ -27,6 +29,12 @@
         const miDiv=document.querySelector("#div1") /*Para crear una constante que va asociado al <div>*/
         console.log(miDiv.innerHTML); //Para seleccionar el contenido de dentro del <div>
         miDiv.innerHTML=("<strong>He cambiado el texto!</strong>")
+
+        console.log(miDiv.classList) //veure la clase del <div> 
+        miDiv.classList.remove("destacado") //Para eliminar la clase y siempre para depurar correctamente después de cada cambio añadir "console.log deajo para ver que sea ejecutado corectamente y quede constancia"
+        console.log(miDiv.classList)
+        miDiv.classList.add("destacado")
+        console.log(miDiv.classList)
     </script>
 </body>
 </html>
