@@ -1,11 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercici - 7</title>
 </head>
 <body>
-    
+    <h1>Exercici 7</h1>
+    <div  id="contenido">
+        <p>Hola</p>
+    </div>
+    <script>
+        const miDiv = document.querySelector("#contenido")
+        let comptador = 0;
+
+        function cuenta(){
+            comptador = comptador + 1;
+            miDiv.innerHTML=("Has clicat" + comptador + " " + "vegades") // para seleccionar y cambiar el texto de nuestro "div".
+        }
+
+        miDiv.addEventListener("click", cuenta) // acuerdate en la sintaxis primero va el evento "click" y separado de una [,] la función, acuerdate que no va separado de un "+" sino de una [,]!!!
+    </script>
 </body>
 </html>
