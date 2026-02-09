@@ -1,51 +1,15 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sessió 5</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercici 5</title>
     <style>
-        .destacado{
-            background-color: yellow;
-        }
+      
     </style>
-</head>
-<body>
-    <h1>Exercicis JavaScript - Sessió 5</h1>
-    <div id="div1" class="destacado">
-        Hola que tal, como estas!
-    </div>
-    <input id=entrada id="btn" type="text" placeholder="Ingresa tu nombre">
-    <button id="btn">Enviar</button>
-    <script>
-        console.log("Hola, món"); /*para ver el mensaje en consola*/
-        let miNombre="Adam Sánchez" /*Pra establecer una variable, en este caso el nombre de la variable es "Adam Sánchez"*/
-        console.log("El meu nom és" + miNombre)
-        function saludar(nom) {
-            console.log("Hola," +nom + "!"); /*a tavés de lo que se ponga en el parentesis de "Function" sera la variable que se muestre después en consola*/
-        }
-            saludar("Marc!");
-            saludar("Laura!");
-            saludar("Pep!");
-
-        const miDiv=document.querySelector("#div1") /*Para crear una constante que va asociado al <div>*/
-        console.log(miDiv.innerHTML); //Para seleccionar el contenido de dentro del <div>
-        miDiv.innerHTML=("<strong>He cambiado el texto!</strong>")
-
-        console.log(miDiv.classList) //veure la clase del <div> 
-        miDiv.classList.remove("destacado") //Para eliminar la clase y siempre para depurar correctamente después de cada cambio añadir "console.log deajo para ver que sea ejecutado corectamente y quede constancia"
-        console.log(miDiv.classList)
-        miDiv.classList.add("destacado")
-        console.log(miDiv.classList)
-
-        const inputNombre = document.querySelector("#entrada")
-        function mostraValor(){
-            console.log(inputNombre.value) //para ver el valor del input, es decir el contenido que se rellene en el campo
-
-        }
-
-        const button = document.querySelector("#btn")
-        function 
-    </script>
-</body>
+  </head>
+  <body>
+    <h1>Exercicis - 5</h1>
+   
+  </body>
 </html>
