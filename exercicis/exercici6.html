@@ -6,9 +6,18 @@
     <title>Exercici - 6</title>
 </head>
 <body>
-    <input type="text" id="enrtrada">
+    <input id="entrada" type="text">
+    <button id="btn">Enviar</button>
     <script> // JAVASCRIPT
-        function
-    </script>
+        const inputNombre = document.querySelector("#entrada") // Para seleccioanr un "id" se utiliza [#].
+        function mostraValor(){ //Recuerda que una funcion siempre va acompañada de "{}"
+            console.log(inputNombre.value) // Para mostrar el valor dentro de un INPUT!!!
+            console.log(inputNombre) // solo muestra el input!!!
+        }
+
+        btn.addEventListener("click", mostraValor)
+
+
+</script>
 </body>
 </html>
