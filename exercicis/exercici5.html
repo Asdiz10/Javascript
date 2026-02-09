@@ -5,11 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Exercici 5</title>
     <style>
-      
+      .destacado{
+        background-color: yellow;
+      }
     </style>
   </head>
   <body>
-    <h1>Exercicis - 5</h1>
-   
+    <div class="destacado">
+      <h1>Exercicis - 5</h1> 
+    </div>
+    <script>
+      let miDiv = document.querySelector(".destacado") // Primero creamos una variable y seguido con "[document.querySelector]" asociamos la variable a nestra clase "destacado".
+      miDiv.classList.remove("destacado"); // Sirve para eliminar una clase, lo que esta entre "()" es el nombre de la clase, acuerdate que van sin punto.
+      console.log(miDiv.classList);
+    </script>
   </body>
 </html>

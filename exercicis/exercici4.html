@@ -6,6 +6,13 @@
     <title>Exercici - 4</title>
 </head>
 <body>
-    
+    <div>
+        <h1 id="miDiv">Hola que tal, como estas</h1>
+    </div>
+    <script> // La sección "script" siempre tiene que ir al final del propio html ya creado.
+        const div = document.querySelector("#miDiv"); // primero se crea una constante y seguido se hace referencia al id de nuestro "div", en este caso un "h1" con la etiqueta "document.queryselector", ACUERDATE!!! la etiqueta se escribe así "const div" no así [div.const]!!!
+        div.innerHTML = "<strong>He cambiado el texto</strong>"; // con la etiqueta "div.innerHTML" seleccionaremos el texto de nuestra constante que hace refernecia a nuestro h1 y cambiaremos el texto
+    </script>
+
 </body>
 </html>
