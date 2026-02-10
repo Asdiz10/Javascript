@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercici 12</title>
+    <style>
+      .correcto {
+        border: green 5px solid;
+      }
+
+      .incorrecto {
+        border: red 5px solid;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Exercici 12</h1>
+    Edad: <input type="number" id="contenido" />
+    <button id="buton">Entrar</button>
+
+    <div id="divv"></div>
+
+    <script>
+      const input = document.querySelector("#contenido");
+      const btn = document.querySelector("#buton");
+      const miDiv = document.querySelector("#divv");
+      console.log(input);
+      console.log(btn);
+      console.log(miDiv);
+
+      btn.addEventListener("click", ctrlboton);
+      function ctrlboton() {
+        if (input.value >= 18) {
+          //Si el valor del Input es igual a 18 en la consola saldra "dentro tengo 18!!!"
+          console.log("dentro tengo 18!!!");
+          miDiv.innerHTML = input.value; // El contenido del "div", será el mismo que el del "input".
+          miDiv.classList.add("correcto");
+          miDiv.classList.remove("incorrecto");
+          console.log(miDiv.classList);
+        } else {
+          console.log("Acceso denegado");
+          miDiv.innerHTML = input.value;
+          miDiv.classList.add("incorrecto");
+          miDiv.classList.remove("correcto");
+          console.log(miDiv.classList);
+        }
+      }
+    </script>
+  </body>
+</html>

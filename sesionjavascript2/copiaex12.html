@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copia exercici12</title>
+    <style>
+        .correcto{
+
+        }
+
+        .incorrecto{
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Copia del EX12</h1>
+    Edad: <input type="number" id="input">
+    <button id="btn">Entrar</button>
+    <div id="divv">
+
+    </div>
+
+    <script>
+        const inputt = document.querySelector("#input") //Lo mismo
+        const buton = document.querySelector("#btn") //Lo mismo 
+        const miDiv = document.querySelector("#divv") //Acabamos de seleccionar el dic del html.
+        console.log(inputt) // Lo mimso
+        console.log(buton) // Lo mismo
+        console.log(miDiv) //Acabamos de visualizar el "div" en la consola 
+
+        buton.addEventListener("click", ctrlboton) // Se ha creado un evento, al hacer "click en el boton."
+        function ctrlboton(){ // Sirve para craer una funcion que se llevará acabo cuando se haga "click" en el boton
+            if (inputt.value>=18){
+            console.log("Estoy dentro")
+                
+
+
+
+            } else{
+                console.log("Acceso denegado")
+            }
+           
+        } 
+    </script>
+
+
+
+    
+    
+</body>
+</html>
