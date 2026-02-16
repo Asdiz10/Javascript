@@ -11,17 +11,33 @@
     <div id="resultado">
         <p></p>
     </div>
-    <button id="boton">PULSA</button>
-            
-    // seleccionar con un id tanto el input coomo el div [HECHO]
-    // Crear una funcion, a la hora de hacer click en el botón el contenido del input se copie en el div, si el input esta vacío en el div debe verse "No he escrit res".
-    [In Process]
+    <button id="boton">PULSA</button> 
+    
+    <!--Seleccionar un id tanto en el input como en el div [HECHO]-->
+    <!--Crear una funcion, a la hora de hacer click en el botón el contenido del input se copie en el div, si el input esta vacío en el div debe verse "No he escrit res". [IN PROCESS]-->
+    
+    <!--COMENTARIOS EN "HTML"-->
 
     <script>
-        const inpt = document.querySelector("#entrada")
+        const inpt = document.querySelector("#entrada") // Para ver el id asociado a un elemento en consola.  // COMENTARIOS EN "SCRIPT"
         console.log(inpt)
-        const btn = document.querySelector("#resultado")
+        const div = document.querySelector("#resultado")
         console.log(btn)
+        const btn = document.querySelector("#boton")
+
+        function cambia(){
+            if (inpt.value = ""){
+                div.innerHTML = "No has escrit res"
+
+            } else{
+                div.innerHTML = inpt.value
+            }
+        }
+
+        
+        
+        btn.addEventListener("click", cambia)
+
     </script>
 </body>
 </html>
