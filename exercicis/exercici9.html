@@ -4,8 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercici - 9</title>
+    <style>
+        .destacado{
+            background-color: red;
+        }
+    </style>
 </head>
 <body>
-    
+    <h1>Alternar clases al fer clic</h1>
+
+    <div id="contenido" class="destacado">
+        <p>Hola que tal me llamo Adam</p>
+    </div>
+
+
+    <script>
+        const miDiv = document.querySelector("#contenido");
+        console.log(miDiv)
+
+        function cambiaId(){
+            if(miDiv.classList.contains("destacado")){ //De esta forma le indicas que tiene una clase.
+                 miDiv.classList.remove("destacado") // Le quitamos la clase.
+            } else{ 
+                miDiv.classList.add("destacado") // Le añadimos la clase.
+            }
+        }
+        miDiv.addEventListener("click", cambiaId) // Al hacer click ejecutara la función indicada.
+    </script>
 </body>
 </html>

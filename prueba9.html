@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>volvemos a empezar</title>
+    <style>
+        .destacado{
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>Alternar clases</h1>
+
+    <div id="contenido" class="destacado">
+        <p>Hola que tal me llamo adam lo he vuelto ha a hcer</p>
+    </div>
+   
+    <!--LEE!! LEE!! LEE!! LEE!!-->
+
+    <script>
+        // Si el div tiene la clase .destacado quitarsela.
+        // Si el div no tiene  la clase .destacado ponersela. [TODO ESTO AL HACER CLICK]
+
+        const miDiv = document.querySelector("#contenido"); // Acuerdate que los "id" se selecionan con [#].
+        console.log(miDiv) //Recuerda para depurar primero hay que crear.
+
+        function cambiaId(){
+            if(miDiv.classList.contains("destacado")){
+                miDiv.classList.remove("destacado")
+
+            } else {
+                miDiv.classList.add("destacado")
+            }
+        }
+        miDiv.addEventListener("click", cambiaId) // primero se escribe entre " " el evento, en este caso clicar y luego se añade el nombre de la función, así al ejecutar el evento hara lo que corresponda con la función.
+    </script>
+</body>
+</html>

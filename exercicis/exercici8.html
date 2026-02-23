@@ -22,11 +22,11 @@
         const inpt = document.querySelector("#entrada") // Para ver el id asociado a un elemento en consola.  // COMENTARIOS EN "SCRIPT"
         console.log(inpt)
         const div = document.querySelector("#resultado")
-        console.log(btn)
         const btn = document.querySelector("#boton")
+        console.log(btn) //IMPORTANTE!! Siempre se depura después de haber creado una constante
 
         function cambia(){
-            if (inpt.value = ""){
+            if (inpt.value === ""){
                 div.innerHTML = "No has escrit res"
 
             } else{
