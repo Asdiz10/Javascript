@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercici-13</title>
+</head>
+<body>
+    <h1>Selector de Vehículos</h1>
+
+    <!--Crear un selector en el que haya una lista de vehículos [HECHO]-->
+    <!--Crear un boton que cuando lo selecciones enseñe una foto del vheículo que hayas seleccionado-->
+
+    <div>
+        <select name="" id="selector">
+            <option id="audii" value="audi">Audi</option>
+            <option id="dog" value="dodge">Dodge challenger</option>
+            <option id="R" value="rivian">Rivian</option>
+            <option id="nissan" value="skyline">Nissan skyline</option>
+        </select>
+    </div>
+            
+        <img id="imagen" src="" alt=""> <!--La ruta se deja en blanco poruqe luego en el script le indicaremos que ruta escoger-->
+
+    <button id="boton">VER</button>
+
+    <script>
+        const sele = document.querySelector("#selector");
+        console.log(sele)
+        const imgg = document.querySelector("#imagen")
+        const btn = document.querySelector("#boton")
+
+        function ver(){
+            if (sele.value == "audi") {  // Para indicar el valor "Si el valos es audi...."
+                imgg.src = "audi.jpg" // Para indicar la ruta de la imagen 
+            } else if (sele.value == "dodge"){ // Para crear otro "if"
+                imgg.src = "dodge.jpg"
+            } else if (sele.value == "rivian"){ // 
+                imgg.src = "rivian.jpg"
+            } else if (sele.value == "skyline"){
+                imgg.src = "skyline.jpg"
+            }
+
+        }
+
+        btn.addEventListener("click", ver)
+
+
+
+    </script>
+</body>
+</html>
