@@ -23,7 +23,7 @@
       }
 
       .mosca {
-        top: 20px;
+        top: 100px;
         width: 100px;
         position: absolute;
       }
@@ -40,7 +40,35 @@
       </div>
     </div>
 
-    
+    <script>
+      // Hay que hacer que la mosca se pueda mover hacia arriba y abajo.
+
+      const miDiv = document.querySelector(".mosca")
+      console.log(miDiv)
+
+      let y = 0
+      console.log(y)
+      let x = 0
+      console.log(x)
+
+      function mover(e){
+        if( e.key == "ArrowUp"){ // e.key para detectar la flecha.
+          y = y - 5 // Restamos para que suba
+          console.log("ARRIBA!!!")
+          document.querySelector(".mosca").style.top = y + "px"
+        }
+         
+        if(e.key = "ArrowDown"){
+          
+        }
+        
+          
+
+      }
+      document.addEventListener("keydown", mover)
+
+      
+    </script>
 
   </body>
 </html>
