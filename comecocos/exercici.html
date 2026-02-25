@@ -9,27 +9,38 @@
         margin: 0;
       }
 
+      .fondoo{
+        overflow: hidden;
+        
+      }
+
       .fondo {
         width: 2000px;
         height: 2000px;
-        overflow: hidden;
         position: relative;
-        background-image: url(fondomosca.jpg);
         background-size: cover;
         
       }
 
       .mosca {
+        top: 20px;
         width: 100px;
         position: absolute;
       }
     </style>
+
   </head>
   <body>
-    <div class="fondo">
+    <div>
+      <div class="fondoo">
+        <img src="fondomosca.jpg" alt="" class="fondo">
+      </div>
       <div class="mosca">
         <img src="mosca.gif" alt="mosca" />
       </div>
     </div>
+
+    
+
   </body>
 </html>
