@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCICI - MOSCA</title>
+    <style>
+        body{
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        .juego{
+            border: 2px solid black;
+            width: 500px;
+            height: 500px;
+            overflow: hidden; /*Oculta el contenido que sobresale dentro del div*/
+            position: relative;
+        }
+
+        .mosca{
+            position: absolute;
+            top: 50px;
+            
+        }
+
+
+        .mosquito{
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+ 
+
+    <div class="juego">
+        <img src="fondomosca.jpg" alt="fondomosca">
+        <div class="mosca">
+            <img src="mosca.gif" alt="mosca" class="mosquito">
+        </div>
+    </div>
+
+
+    <script>
+        let y = 0
+        let x = 0
+        const elem = document.querySelector(".mosca") //Recuerda las clases se seleccionan con "."
+
+        function mover(e){
+            let tecla = e.key
+            
+
+            if(tecla == "ArrowUp"){
+                y = y -10
+                console.log(y)
+                elem.style.top = y + "px"
+                
+            }
+            if(tecla == "ArrowDown"){
+                y = y +10
+                console.log(y)
+                elem.style.top = y + "px"
+            }
+            if(tecla == "ArrowLeft"){
+                x = x -10
+                console.log(x)
+                elem.style.left = x + "px"
+            }
+            if(tecla == "ArrowRight"){
+                x = x +10
+                console.log(x)
+                elem.style.left = x + "px"
+            }
+            
+        }
+        addEventListener("keydown", mover)
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
