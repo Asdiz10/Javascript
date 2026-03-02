@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOSCA</title>
+    <style>
+
+        body{
+            margin: 0;
+            height: 100vh;
+            display: flex;           
+            justify-content: center; 
+            align-items: center; 
+
+        }
+
+        .juego{
+            border: solid 2px black;
+            overflow: hidden; 
+            width: 500px;
+            height: 500px;
+            position: relative;
+        }
+
+        .mosca{
+            position: absolute;
+            top: 50px;
+            
+        }
+
+        .mosquito{
+            width: 100px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="juego">
+            <img src="fondomosca.jpg" alt="">
+        <div class="mosca"> 
+            <img src="mosca.gif" alt="gif" class="mosquito">
+        </div>
+    </div>
+
+
+    <script>
+        let y = 0
+        let x = 0
+        const elem = document.querySelector(".mosca");
+        console.log(elem)
+
+        function mover(e){
+            let tecla = e.key
+            if (tecla == "ArrowUp"){
+                y = y -10
+                elem.style.top = y + "px"
+                console.log("ArrowUp")
+            }
+            if (tecla == "ArrowDown"){
+                y = y +10
+                elem.style.down = y + "px"
+                console.log("ArrowDown")
+            }
+            if (tecla == "ArrowLeft"){
+                x = x -10
+                elem.style.left = x + "px" //Acuerdate que al final de la etiqueta x.x."indica a que posicion se va a mover"
+                console.log("ArrowLeft")
+            }
+            if (tecla == "ArrowRight")
+                x = x +10
+                elem.style.right
+                console.log("ArrowLeft")
+
+
+        }
+        addEventListener("keydown", mover)
+    </script>
+</body>
+</html>
