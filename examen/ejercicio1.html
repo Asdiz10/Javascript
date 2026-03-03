@@ -4,11 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 1</title>
+    <style>
+
+
+
+        .div1{
+            background-color: rgb(6, 255, 6);
+            height: 100px;
+            width: 100px;
+        }
+
+        .redd{
+            background-color: red;
+        }
+
+
+        .green{
+            background-color: green;
+        }
+
+
+        .yelloww{
+            background-color: yellow;
+        }
+        
+
+        .greenn{
+            background-color: green;
+        }
+    </style>
 </head>
 <body>
+    <h1>Ejercicio 1</h1>
     <input id="nom" type="text">
     <input id="cognom" type="text">
     <button id="boton">PULSA</button>
+
+    <h2>Ejercicio 2</h2>
+    <div id="contenido" class="div1"></div>
+    <button class="redd" id="red">rojo</button>
+    <button class="greenn" id="green">verde</button>
+    <button class="yelloww" id="yellow">amarillo</button>
+    
+    <h2>Ejercicio 3</h2>
+    <input type="number" name="" id="">
+
+    <input type="number" name="" id="">
+
+    <input type="number" name="" id="">
+
+    <div class="divnmb"></div>
+    <button>CALCULA</button>
+
 
 
     <script>
@@ -25,8 +72,40 @@
         }
         btn.addEventListener("click", miDiv)
 
+        
+        const rojo = document.querySelector("#red")
+        console.log(rojo)
+        const verde = document.querySelector("#green")
+        console.log(verde)
+        const amarillo = document.querySelector("#yellow")
+        console.log(amarillo)
+        const content = document.querySelector("#contenido")
+
+        function camBiar(){
+            content.classList.add("redd")
+            content.classList.remove("yelloww")
+            content.classList.remove("greenn")
+            
+            
+
+        }
+        rojo.addEventListener("click", camBiar)
 
 
+        function verdee(){
+            content.classList.add("greenn")
+            content.classList.remove("yelloww")
+            content.classList.remove("redd")
+        }
+        verde.addEventListener("click", verdee)
+
+
+        function amaRillo(){
+            content.classList.add("yelloww")
+            content.classList.remove("redd")
+            content.classList.remove("greenn")
+        }
+        amarillo.addEventListener("click", amaRillo)
     </script>
 </body>
 </html>
