@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
     <title>MOSCA</title>
     <style>
 
@@ -21,24 +20,6 @@
             overflow: hidden; 
             width: 500px;
             height: 500px;
-=======
-    <title>EXERCICI - MOSCA</title>
-    <style>
-        body{
-            margin: 0;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-
-        .juego{
-            border: 2px solid black;
-            width: 500px;
-            height: 500px;
-            overflow: hidden; /*Oculta el contenido que sobresale dentro del div*/
->>>>>>> 0028ff3a770f0d45487dce86f46fa8f1b34f8242
             position: relative;
         }
 
@@ -48,32 +29,17 @@
             
         }
 
-<<<<<<< HEAD
         .mosquito{
             width: 100px;
 
-=======
-
-        .mosquito{
-            height: 100px;
->>>>>>> 0028ff3a770f0d45487dce86f46fa8f1b34f8242
         }
     </style>
 </head>
 <body>
-<<<<<<< HEAD
     <div class="juego">
             <img src="fondomosca.jpg" alt="">
         <div class="mosca"> 
             <img src="mosca.gif" alt="gif" class="mosquito">
-=======
- 
-
-    <div class="juego">
-        <img src="fondomosca.jpg" alt="fondomosca">
-        <div class="mosca">
-            <img src="mosca.gif" alt="mosca" class="mosquito">
->>>>>>> 0028ff3a770f0d45487dce86f46fa8f1b34f8242
         </div>
     </div>
 
@@ -81,7 +47,6 @@
     <script>
         let y = 0
         let x = 0
-<<<<<<< HEAD
         const elem = document.querySelector(".mosca");
         console.log(elem)
 
@@ -110,45 +75,6 @@
 
         }
         addEventListener("keydown", mover)
-=======
-        const elem = document.querySelector(".mosca") //Recuerda las clases se seleccionan con "."
-
-        function mover(e){
-            let tecla = e.key
-            
-
-            if(tecla == "ArrowUp"){
-                y = y -10
-                console.log(y)
-                elem.style.top = y + "px"
-                
-            }
-            if(tecla == "ArrowDown"){
-                y = y +10
-                console.log(y)
-                elem.style.top = y + "px"
-            }
-            if(tecla == "ArrowLeft"){
-                x = x -10
-                console.log(x)
-                elem.style.left = x + "px"
-            }
-            if(tecla == "ArrowRight"){
-                x = x +10
-                console.log(x)
-                elem.style.left = x + "px"
-            }
-            
-        }
-        addEventListener("keydown", mover)
-
-
-
-
-
-
-
->>>>>>> 0028ff3a770f0d45487dce86f46fa8f1b34f8242
     </script>
 </body>
 </html>
