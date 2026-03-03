@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+</head>
+<body>
+    <input id="nom" type="text">
+    <input id="cognom" type="text">
+    <button id="boton">PULSA</button>
+
+
+    <script>
+        const nmb = document.querySelector("#nom")
+        console.log(nmb)
+        const apell = document.querySelector("#cognom")
+        console.log(apell)
+        const btn = document.querySelector("#boton")
+        console.log(btn)
+
+        function miDiv(){
+            console.log("Buneos dias" + " " + nmb.value + " " + apell.value)
+
+        }
+        btn.addEventListener("click", miDiv)
+
+
+
+    </script>
+</body>
+</html>
