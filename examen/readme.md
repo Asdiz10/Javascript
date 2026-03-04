@@ -6,4 +6,4 @@
 
 ## Ejercicio 3 - Crea 3 inputs de tipo número para las notas del trimestre y un boton que permitira la media y mostrarla en un div.
 
-## Ejercicio 4 - Crea la lógica necesaria para que una de las noras es inferior a 5 el resulado de la nota sea un 4 y un texto que indique.
+## Ejercicio 4 - Crea la lógica necesaria para que si una de las notas es inferior a 5 el resulado de la nota sea un 4 y un texto que indique "SUSPENDIDO"
