@@ -55,6 +55,10 @@
 
     <div class="divnmb"></div>
     <button id="cabtn">CALCULA</button>
+    <!--EJERCICIO 3.-->
+
+
+    <div id="divtxt"></div>
 
 
 
@@ -108,20 +112,31 @@
         amarillo.addEventListener("click", amaRillo)
 
 
-        let nte1 = document.querySelector("#nota1").value
-        console.log(nte1)
-        let nte2 = document.querySelector("#nota2").value
-        console.log(nte2)
-        let nte3 = document.querySelector("#nota3").value
-        console.log(nte3)
-        const div1 = document.querySelector("#divnmb")
-        console.log(miDiv)
+        
+        const div1 = document.querySelector(".divnmb")
         const caabtnn = document.querySelector("#cabtn")
 
         function media(){
+            let nte1 = Number(document.querySelector("#nota1").value)
+            console.log(nte1)
+            let nte2 = Number(document.querySelector("#nota2").value)
+            console.log(nte2)
+            let nte3 = Number(document.querySelector("#nota3").value)
+            console.log(nte3)
+
+            div1.innerHTML = "tu media es:" + (nte1 + nte2 + nte3)/3;
+
+            let div2 = document.querySelector("#divtxt")
+            if(nte1 < 5 || nte2 < 5 || nte3 < 5){
+                div2.innerHTML= "ESTAS SUSPENDIDO"
+
+            } else{
+                div2.innerHTML= "MUY BIEEEEN!!!!!!"
+            }
+
 
         }
-        caa
+        caabtnn.addEventListener("click", media)
 
 
 
