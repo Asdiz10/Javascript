@@ -5,20 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PRÁCTICA</title>
     <style>
-        button{
-            width: 50px;
-            height: 20px;
+
+        .dii{
+            width: 100px;
+            height: 100px;
+            border: 2px solid black;
+            color: aqua;
+        }
+
+        .NOCHE{
+            background-color: rgb(11, 0, 20);
+            color: white;
+        }
+
+        .DIA{
+            background-color: burlywood;
+            color: black;
         }
     </style>
 </head>
 <body>
-    <h1>EJERCICI 1</h1>
+    <h1>EJERCICIO 1</h1>
 
     <input id="ciudad" type="text">
     <input id="País" type="text">
     <br>
-    <button id="boton">PULSA</button>
+    <button class="b1" id="boton">PULSA</button>
     <div id="divv"></div>
+
+    <!--EJ1-->
+
+    <h2>Ejercico 2</h2>
+        <div id="div2" class="dii">Hola</div>
+
+        <button id="btno" >MODO NOCHE</button>
+        <button id="btdi">MODO DIA</button>
+    
+    <!--EJ2-->
+
+    <h2>Ejercico 3</h2>
+        <input id="p1" type="text">
+        <input id="p2" type="text">
+        <button id="tt">CALCULA</button>
+        <div id="contenido"></div>
 
 
     <script>
@@ -27,10 +56,11 @@
         const btn = document.querySelector("#boton")
         const miDiv = document.querySelector("#divv")
 
-
+        //EJERCICIO 3
         function camBiar(){
 
-            miDiv.innerHTML=("Te gustaría viajar" + " " + city.value + "en" + country.value)
+            miDiv.innerHTML=("Te gustaría viajar a" + " " + city.value + " "+ "en" + " " + country.value)
+            console.log(miDiv.innerHTML)
 
 
 
@@ -39,11 +69,50 @@
         }
         btn.addEventListener("click", camBiar)
 
+        //EJERCICIO 2
+        const Dimi = document.querySelector("#div2")
+        const btnn = document.querySelector("#btno")
+        const btd = document.querySelector("#btdi")
+
+        function CAMBIAR(){
+            Dimi.classList.add("NOCHE") //SIN . CUIDADO!!!, al tener ya "classList" ya entinde que es una clase.
+            Dimi.classList.remove("DIA")
+
+            
+            
+          
+
+        }
+        btnn.addEventListener("click", CAMBIAR)
+
+        function Change(){
+            Dimi.classList.add("DIA") //SIN . CUIDADO!!!, al tener ya "classList" ya entinde que es una clase.
+             Dimi.classList.remove("NOCHE") 
+        }
+        btd.addEventListener("click", Change)
+
+       //EJERCICIO 4
+
+       
+        const bb = document.querySelector("#tt")
+        const contain = document.querySelector("#contenido")
+
+        function calcular(){
+            let pr1 = Number(document.querySelector("#p1").value)
+            let pr2 = Number(document.querySelector("#p2").value)
+
+            let total = pr1 + pr2
+            
+            if(total >= 100){
+                total = total -10
+                contain.innerHTML = "Este es el precio con descuento" + " " + total + "€"
+            }
 
 
 
 
-
+        }
+        bb.addEventListener("click", calcular)
 
 
     </script>
