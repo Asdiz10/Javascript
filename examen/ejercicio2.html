@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRÁCTICA</title>
+    <style>
+        button{
+            width: 50px;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>EJERCICI 1</h1>
+
+    <input id="ciudad" type="text">
+    <input id="País" type="text">
+    <br>
+    <button id="boton">PULSA</button>
+    <div id="divv"></div>
+
+
+    <script>
+        const city = document.querySelector("#ciudad")
+        const country = document.querySelector("#País")
+        const btn = document.querySelector("#boton")
+        const miDiv = document.querySelector("#divv")
+
+
+        function camBiar(){
+
+            miDiv.innerHTML=("Te gustaría viajar" + " " + city.value + "en" + country.value)
+
+
+
+
+
+        }
+        btn.addEventListener("click", camBiar)
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+</body>
+</html>
