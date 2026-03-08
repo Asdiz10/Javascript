@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACINE</title>
+    <style>
+
+        .caja{
+
+        }
+
+        .aprobado{
+            background-color: green;
+        }
+
+        .adulto{
+            background-color: blue;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>VALIDADOR DE ENTRADAS</h1>
+
+    <input id="edad" type="text">
+    <input id="precio" type="text">
+    <button id="boton" >HOLA</button>
+    <div id="resultado" class="caja"></div>
+
+
+
+    <script>
+        const res = document.querySelector("#resultado")
+        const btn = document.querySelector("#boton")
+
+        function vaLidar(){
+            let years = Number(document.querySelector("#edad").value)
+            let price = Number(document.querySelector("#precio").value)
+            
+            if(years < 18){
+                price = price -2
+                res.innerHTML = "Eres menor, este es tu precio" + " " + price
+                
+            }
+
+
+
+        }
+        btn.addEventListener("click", vaLidar)
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
