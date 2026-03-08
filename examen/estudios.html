@@ -4,8 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UNIVERSIDAD</title>
+    <style>
+        .aprobado{
+            background-color: rgb(0, 161, 0);
+        }
+
+
+        .suspendido{
+            background-color: rgb(252, 43, 43);
+        }
+
+
+    </style>
 </head>
 <body>
-    
+    <h1>Gestor de Becas</h1>
+
+        <input id="note" type="text">
+        <input id="Income" type="text">
+        <br>
+        <div id="miDiv"></div>
+        <button id="boton">VER</button>
+        
+
+        <script>
+            const mensaje = document.querySelector("#miDiv")
+            const btnBeca = document.querySelector("#boton")
+
+            function ver(){
+                let nota = Number(document.querySelector("#note").value)
+                let Ingresos = Number(document.querySelector("#Income").value)
+
+                if(nota >= 8 && Ingresos <= 1000){
+                    mensaje.innerHTML = "Beca concedida"
+                    mensaje.className = "aprobado"
+
+                   
+                    
+                } else{
+                    mensaje.innerHTML = "Beca denegada"
+                    mensaje.className = "suspendido"
+                   
+                    
+                }
+
+            }
+            btnBeca.addEventListener("click", ver)
+
+
+
+
+        </script>
+
 </body>
 </html>
