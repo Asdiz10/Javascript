@@ -38,11 +38,18 @@
             let years = Number(document.querySelector("#edad").value)
             let price = Number(document.querySelector("#precio").value)
             
-            if(years < 18){
+            
+            if(years <= 18){
                 price = price -2
                 res.innerHTML = "Eres menor, este es tu precio" + " " + price
+                res.className = "aprobado"
                 
+            } else {
+                price = price
+                res.innerHTML = "Precio nomral, este es el total" + " " + price
+                res.className = "adulto"
             }
+                
 
 
 
