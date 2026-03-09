@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MATES</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <h1>Tabla de Multiplicar</h1>
+
+    <input id="numero" type="text">
+    <button id="boton">Generar Tabla</button>
+    <div id="result"></div>
+
+    <script>
+
+        const number = document.querySelector("#numero")
+        const btn = document.querySelector("#boton")
+        const res = document.querySelector("#result")
+
+        function Multiplicar(){
+            let n = Number(number.value)
+
+            for(let i = 0; i <= 10; i = i + 1){
+                let calculo = n * i;
+                res.innerHTML = res.innerHTML + n + " x " + i + " = " + calculo + "<br>";
+            }
+
+        }
+        btn.addEventListener("click", Multiplicar)
+
+
+
+
+
+
+    </script>
+
+
+
+
+</body>
+</html>
