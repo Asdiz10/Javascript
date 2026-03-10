@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen</title>
+    <style>
+       .div1{
+        width: 100px;
+        height: 100px;
+        border: solid 2px black;
+       }
+    </style>
+</head>
+<body>
+    <h1>EJ1</h1>
+    <input  id="input" type="text">
+    <button id="boton">PULSA</button>
+    <div id="divv"></div>
+    <!--terminado el ej1-->
+
+    <h2>EJ2</h2>
+
+    <div id="vid" class="div1"></div>
+    <button id="boton1">SIGUIENTE</button>
+
+
+    <script>
+
+        const int = document.querySelector("#input")
+        const btn = document.querySelector("#boton")
+        const miDiv = document.querySelector("#divv")
+
+        function Validar(){
+            let nombre = int.value
+            if(nombre === "Admin"){
+                miDiv.innerHTML = "Bienvenido, jefe"
+                miDiv.style.color = "blue"
+            } else if(nombre === ""){
+                miDiv.innerHTML = "Introduce el nombre"
+                miDiv.style.color = "orange"
+
+            } else{
+                miDiv.innerHTML = "Acceso denegado"
+                miDiv.style.color = "red"
+            }
+
+        }
+        btn.addEventListener("click", Validar)
+
+        //Terminado
+
+       const divi = document.querySelector("#vid")
+       const idd = document.querySelector("#boton1")
+       let contador = 0 
+
+       function camBiar(){
+            contador = contador +1
+            if(contador === 1){
+                divi.style.backgroundColor = "red"
+            } else if(contador === 2){
+                divi.style.backgroundColor = "yellow"
+            } else if(contador === 3){
+                divi.style.backgroundColor = "green"
+            } else{
+                contador = 0
+                divi.style.backgroundColor = "white"
+            }
+       }
+       idd.addEventListener("click", camBiar)
+
+
+
+
+    </script>
+</body>
+</html>

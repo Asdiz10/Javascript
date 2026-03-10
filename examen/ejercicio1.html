@@ -39,6 +39,7 @@
     <input id="nom" type="text">
     <input id="cognom" type="text">
     <button id="boton">PULSA</button>
+    <div id="divv"></div>
 
     <h2>Ejercicio 2</h2>
     <div id="contenido" class="div1"></div>
@@ -69,6 +70,7 @@
         console.log(apell)
         const btn = document.querySelector("#boton")
         console.log(btn)
+        const divi = document.querySelector("#divv")
 
         function miDiv(){
             console.log("Buneos dias" + " " + nmb.value + " " + apell.value)
@@ -130,7 +132,7 @@
             if(nte1 < 5 || nte2 < 5 || nte3 < 5){
                 div2.innerHTML= "ESTAS SUSPENDIDO"
 
-            } else{
+            } else if(){
                 div2.innerHTML= "MUY BIEEEEN!!!!!!"
             }
 
