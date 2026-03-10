@@ -22,6 +22,9 @@
         const res = document.querySelector("#result")
 
         function Multiplicar(){
+
+            res.innerHTML = "";
+
             let n = Number(number.value)
 
             for(let i = 0; i <= 10; i = i + 1){
@@ -31,6 +34,9 @@
 
         }
         btn.addEventListener("click", Multiplicar)
+
+
+
 
 
 
