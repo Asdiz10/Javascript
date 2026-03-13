@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXAMEN - JS</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            border: solid 2px black;
+        }
+
+        .rojo{
+            background-color: red;
+        }
+
+        .verde{
+            background-color: green;
+        }
+
+        .negro{
+            background-color: black;
+            color: white;
+        }
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <h1>Examen JavaScript</h1>
+
+    <input id="inpt" type="text">
+    <button id="boton">PULSA</button>
+    <div id="divv"></div>
+
+
+
+    <script>
+
+        const input1 = document.querySelector("#inpt")
+        const btn = document.querySelector("#boton")
+        const miDiv = document.querySelector("#divv")
+
+        function camBiar(){
+            if(input1.value === "Rojo"){
+                miDiv.innerHTML = "Es de color rojo"
+                miDiv.classList.add("rojo")
+                miDiv.classList.remove("verde")
+                miDiv.classList.remove("negro")
+
+            } else if(input1.value === "Verde"){
+                miDiv.innerHTML = "Es de color verde"
+                miDiv.classList.add("verde")
+                miDiv.classList.remove("rojo")
+                miDiv.classList.remove("negro")
+            } else{
+                miDiv.innerHTML = "No has elegido ningún color"
+                miDiv.classList.add("negro")
+                miDiv.classList.remove("rojo")
+                miDiv.classList.remove("verde")
+                
+            }
+        }
+        btn.addEventListener("click", camBiar)
+
+        
+        
+        
+        function moVer(){
+
+        }
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
