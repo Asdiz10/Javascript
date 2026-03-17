@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TABLA de Multiplicar</title>
+    <style>
+        .calculadora{
+            border: 2px solid rgb(255, 0, 0);
+            width: 300px;
+            height: 500px;
+            
+        }
+
+
+        .numero{
+            display: flex;
+            border: 2px solid black;
+            width: 200px;
+            height: 100px;
+            gap: 10px;
+            
+        }
+
+
+        .num{
+            background-color: red;
+            width: 20px;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculadora">
+        <div class="numero" id="numeros">
+          
+        </div>
+    </div>
+
+
+    <script>
+
+        let divsNumeros = ""
+
+        for(let cont = 1 ; cont <= 9 ; cont++){
+
+            divsNumeros=divsNumeros + `<div class="num" id="${cont}">${cont}</div>` 
+
+
+
+
+
+
+        }
+        document.querySelector("#numeros").innerHTML=divsNumeros
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        
+
+
+
+    </script>
+</body>
+</html>
