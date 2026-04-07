@@ -16,15 +16,38 @@
 
     <script>
 
-    const frutas = ["plátano","naranja","manzana"] //funionan con "[]"
+    const frutas = ["plátano","naranja","manzana", "fresa"] //funionan con "[]"
 
     console.log(frutas)
     console.log("número de elementos", frutas.length) //Número de elementos que tiene un vector ".length"
     console.log(frutas[1]) //para ver el elemento que quieras, empieza siempre en "0"
     console.log(frutas[frutas.length-1]) //la posicion del último elemento menos "1" se hace así porque empieza siempre en "0"
 
-
+    for(let i = 0; i < frutas.lenght ; i++){
+        console.log(frutas[i])
+    }
     
+
+
+
+
+
+
+
+
+
+    const personas = [
+        ["Carlos", "Sánchez"],
+        ["Adam", "El Moussaoui"],
+        ["David", "Garcia"]
+    ] 
+    
+ 
+    for(let i=0; i < personas.length; i++){
+        console.log(personas[i][1])
+    }
+
+
 
     </script>
   </body>
