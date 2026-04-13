@@ -51,14 +51,31 @@
 
 
     const productos = [
-      ["Teclado", 15]
-      ["Ratón", 4]
+      ["Teclado", 15], // siempre separados con ","
+      ["Ratón", 4],
       ["Monitor", 8]
     ]
 
     for(let i=0; i < productos.length; i++){
-      console.log(productos[i][i])
+      //Fila i, columna 0 (Nombres) y Fila i, columna 1 (Dato)
+      console.log(productos[i][0] + " ->" + " " + productos[i][1])
     }
+      
+
+
+
+      for (let i = 0; i < productos.length; i++) {
+    let mensaje = ""; // Creamos un mensaje vacío
+
+    if (productos[i][1] < 5) {
+        mensaje = "⚠️ ¡AVISO! Stock bajo.";
+    } else {
+        mensaje = "✅ Stock suficiente.";
+    }
+
+    // Imprimimos todo junto: Nombre + Unidades + Mensaje que hayamos elegido
+    console.log(productos[i][0] + " (" + productos[i][1] + " uds) -> " + mensaje);
+}
 
 
 
