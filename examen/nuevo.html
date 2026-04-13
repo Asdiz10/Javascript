@@ -23,7 +23,7 @@
     console.log(frutas[1]) //para ver el elemento que quieras, empieza siempre en "0"
     console.log(frutas[frutas.length-1]) //la posicion del último elemento menos "1" se hace así porque empieza siempre en "0"
 
-    for(let i = 0; i < frutas.lenght ; i++){
+    for(let i = 0; i < frutas.length ; i++){ // length, RECUERDA!!! TH 
         console.log(frutas[i])
     }
     
@@ -37,14 +37,14 @@
 
 
     const personas = [
-        ["Carlos", "Sánchez"],
+        ["Carlos", "Sánchez"], // cada vector con su propio nombre
         ["Adam", "El Moussaoui"],
         ["David", "Garcia"]
     ] 
     
  
-    for(let i=0; i < personas.length; i++){
-        console.log(personas[i][1])
+    for(let i=0; i < personas.length; i++){ // .length para que el bucle lea todos los elementos sin excepcion.
+        console.log(personas[i][0]+ " " + personas[i][1])
     }
 
 
