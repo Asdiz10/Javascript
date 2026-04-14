@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestor de Noticias</title>
+  </head>
+  <body>
+    <h1>NEW WORLD</h1>
+    <div id="contenidoNoticias">Aquí iran las noticias</div>
+
+    <script>
+      //console.log("Hola");
+
+      const arrayNoticias = [
+        {
+          // Lo que hay dentro de los objetos se denomina propiedades.
+          titulo: "Remontada!!!",
+          texto: "Hola que tal",
+          img: "",
+        },
+
+        {
+          titulo: "De vuelta a la LUNA",
+          texto: "La NASA dispara de nuevo el proyecto evolución",
+          img: "",
+        },
+
+        {
+          titulo: "khgreuguire!!",
+          texto: "Hola que tal",
+          img: "",
+        },
+      ];
+      let listaNoticias = "<ul>";
+      listaNoticias +=
+        //Para añadir otro trozo a la variable, si solo fuera un "=" sustituiria lo que ya existía
+        ` 
+            <li>${arrayNoticias[0].titulo}</li>
+            <li>Madrid uhh!</li>
+        `;
+      listaNoticias = listaNoticias + "</ul>";
+      document.querySelector("#contenidoNoticias").innerHTML = listaNoticias;
+      //console.log(arrayNoticias[0].texto) //Para ver dentro del array una propiedad del mismo objeto
+      //console.log(arrayNoticias[0]) //Para ver dentro del array el objeto
+
+      for (let i = 0; i < arrayNoticias.length; i++) {
+        //console.log(arrayNoticias[i].titulo);
+      }
+
+      const objetoNoticia = {
+        titulo: "Remontada!", //Siempre "," para separar los elementos de un objeto
+        texto: "El Madrid vuleve a hacerlo.",
+        img: "",
+      };
+      //console.log(objetoNoticia.titulo); //para acceder a las propiedades de un objeto
+      //console.log(objetoNoticia);
+      //console.log(arrayNoticias);
+    </script>
+  </body>
+</html>
