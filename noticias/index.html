@@ -9,6 +9,9 @@
     <h1>NEW WORLD</h1>
     <div id="contenidoNoticias">Aquí iran las noticias</div>
 
+
+    
+
     <script>
       //console.log("Hola");
 
@@ -17,13 +20,13 @@
           // Lo que hay dentro de los objetos se denomina propiedades.
           titulo: "Remontada!!!",
           texto: "Hola que tal",
-          img: "",
+          img: "imageen/ILIA.jpg",
         },
 
         {
           titulo: "De vuelta a la LUNA",
           texto: "La NASA dispara de nuevo el proyecto evolución",
-          img: "",
+          img: "imageen/LUNA.jpg",
         },
 
         {
@@ -33,12 +36,23 @@
         },
       ];
       let listaNoticias = "<ul>";
-      listaNoticias +=
+        for(let i = 0; i < arrayNoticias.length; i++){
+            listaNoticias +=
         //Para añadir otro trozo a la variable, si solo fuera un "=" sustituiria lo que ya existía
+
+        
+
         ` 
-            <li>${arrayNoticias[0].titulo}</li>
-            <li>Madrid uhh!</li>
-        `;
+            <div>
+                <h2>${arrayNoticias[i].titulo}</h2>
+                <p>${arrayNoticias[i].texto}</p>
+                <img src="${arrayNoticias[i].img}">
+            </div>
+
+           
+        `
+        }
+      
       listaNoticias = listaNoticias + "</ul>";
       document.querySelector("#contenidoNoticias").innerHTML = listaNoticias;
       //console.log(arrayNoticias[0].texto) //Para ver dentro del array una propiedad del mismo objeto
